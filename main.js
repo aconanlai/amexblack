@@ -24,7 +24,9 @@ var docDefinition = {
 
 function makePDF() {
   var name = document.getElementById('name').value;
-  docDefinition.content = { text: name, fontSize: 10 };
-  pdfMake.createPdf(docDefinition).open();
+  // if (name) {
+    docDefinition.content = { text: name, fontSize: 10 };
+    pdfMake.createPdf(docDefinition).open();
+  // }
 }
 
