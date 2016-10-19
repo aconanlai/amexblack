@@ -3,17 +3,16 @@
 
 <head>
   <meta charset='utf-8'>
-  <title>amexblack</title>
+  <title>American Express Centurion Black Card Free Amazing Wow ~~</title>
+  <meta name="description" content="eugh">
   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-  <script src='build/pdfmake.min.js'></script>
-  <script src='build/vfs_fonts.js'></script>
-  <script src='main.js'></script>
   <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700' rel='stylesheet' type='text/css'>
   <link href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
   <style>
     body {
       background: grey;
       font-family: 'Roboto Condensed', sans-serif;
+      overflow-x: hidden;
     }
     
     .container {
@@ -64,7 +63,7 @@
     }
 
     .form {
-      margin-bottom:25px;
+      margin-bottom:15px;
     }
 
     input[type="text"] {
@@ -111,6 +110,17 @@
       background-image: -o-linear-gradient(top, #424242, #878787);
       background-image: linear-gradient(to bottom, #424242, #878787);
       text-decoration: none;
+    }
+
+    .generic {
+      margin-top:20px;
+      color:white;
+      font-size: 14px;
+    }
+
+    .generic a {
+      color:white;
+      text-decoration:underline;
     }
 
     .benefits {
@@ -169,6 +179,7 @@
     .tos {
       font-family: Georgia, Times, "Times New Roman", serif;
       font-size: 12px;
+      margin-bottom:30px;
     }
 
     .tos a {
@@ -200,8 +211,7 @@
     @media (max-width:798px) {
 
       #bg {
-        top:-80%;
-        height:270%;
+        display:none;
       }
 
       .logocont {
@@ -224,7 +234,17 @@
 
       .btn {
         font-size:24px;
+        width:80%;
+        white-space: normal;
       }
+
+          .tos {
+      font-family: Georgia, Times, "Times New Roman", serif;
+      font-size: 12px;
+      margin-top:330px;
+      margin-bottom:150px;
+    }
+
     }
   </style>
 </head>
@@ -250,7 +270,8 @@
     <div class="col-lg-12 col-md-12 col-sm-12">
       <div class="form">
         <input id="name" autocomplete="off" name="name" type="text" maxlength="25" placeholder="NAME">
-        <div onclick="makePDF()" class="btn">YES! I WANT MY FREE AMEX BLACK CARD!</div>
+        <div onclick="makePDF()" class="btn">YES! I WANT MY FREE CUSTOMIZED AMEX BLACK CARD!</div>
+        <div class="generic"><a href="#" id="genero">Or, Get a Generic Black Card</a></div>
       </div>
       <div class="benefits">
           <ul class="bennies">
@@ -264,9 +285,13 @@
             <li>WAKE UP IN A NEW BUGATTI</li>
           </ul>
       </div>
-      <div class="tos">
-        <a href="termsofuse.txt" target="_blank">terms of use</a>
-      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="container">
+    <div class="tos">
+        <a href="termsofuse.txt" target="_blank">terms of use</a> | <a href="cardmemberagreement.txt" target="_blank">cardmember agreement</a>
     </div>
   </div>
 </div>
@@ -275,5 +300,8 @@
   <span class="desc">CARDS LEFT</span>
 </div>
 <iframe id="bg" src="https://www.youtube.com/embed/Aa8oDHOsv24?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1&amp;loop=1&amp;playlist=Aa8oDHOsv24" frameborder="0" allowfullscreen></iframe>
+<script src='js/pdfmake.min.js'></script>
+  <script src='js/vfs_fonts.js'></script>
+  <script src='js/main.js'></script>
 </body>
 </html>
