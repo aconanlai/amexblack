@@ -11,6 +11,7 @@
   <style>
     body {
       background: grey;
+      background-size: cover;
       font-family: 'Roboto Condensed', sans-serif;
       overflow-x: hidden;
     }
@@ -64,6 +65,10 @@
 
     .form {
       margin-bottom:15px;
+    }
+
+    #mobile {
+      display:none;
     }
 
     input[type="text"] {
@@ -125,7 +130,6 @@
 
     .benefits {
       color:white;
-      background-size: cover;
       height:500px;
       width:100%;
       margin-bottom:20px;
@@ -210,6 +214,18 @@
 
     @media (max-width:798px) {
 
+      body {
+        background-image: url("money.jpg");
+      }
+
+      #mobile {
+        display:block;
+      }
+
+      #desktop {
+        display:none;
+      }
+
       #bg {
         display:none;
       }
@@ -237,12 +253,9 @@
         width:80%;
         white-space: normal;
       }
-
-          .tos {
-      font-family: Georgia, Times, "Times New Roman", serif;
-      font-size: 12px;
-      margin-top:330px;
-      margin-bottom:150px;
+      
+      .tos {
+        display:none;
     }
 
     }
@@ -268,10 +281,14 @@
 <div class="row">
   <div class="container">
     <div class="col-lg-12 col-md-12 col-sm-12">
-      <div class="form">
-        <input id="name" autocomplete="off" name="name" type="text" maxlength="25" placeholder="NAME">
-        <div onclick="makePDF()" class="btn">YES! I WANT MY FREE CUSTOMIZED AMEX BLACK CARD!</div>
-        <div class="generic"><a href="#" id="genero">Or, Get a Generic Black Card</a></div>
+      <div class="form" id="desktop">
+          <input id="name" autocomplete="off" name="name" type="text" maxlength="25" placeholder="NAME">
+          <div onclick="makePDF()" class="btn">YES! I WANT MY FREE CUSTOMIZED AMEX BLACK CARD!</div>
+          <div class="generic"><a href="generic.pdf" target="_blank" id="genero">Or, Get a Generic Black Card</a></div>
+        </div>
+      </div>
+      <div class="form" id="mobile">
+        <a href="generic.pdf" target="_blank"><div class="btn">YES! I WANT MY FREE AMEX BLACK CARD!</div></a>
       </div>
       <div class="benefits">
           <ul class="bennies">

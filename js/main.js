@@ -22,6 +22,11 @@ var docDefinition = {
   ],
 };
 
+function isFacebookApp() {
+    var ua = navigator.userAgent || navigator.vendor || window.opera;
+    return (ua.indexOf("FBAN") > -1) || (ua.indexOf("FBAV") > -1);
+}
+
 function makePDF() {
   var name = document.getElementById('name').value;
   // if (name) {
@@ -30,10 +35,18 @@ function makePDF() {
   // }
 }
 
-function makeGeneric(e) {
-  e.preventDefault();
-  docDefinition.content = { text: '', fontSize: 10 };
-  pdfMake.createPdf(docDefinition).open();
-}
 
-document.getElementById('genero').addEventListener( 'click', makeGeneric, false );
+  if (isFacebookApp()){
+    var reg = document.querySelector("#reg");
+    var fbapp = document.querySelector("#fbapp");
+    reg.style.classList.add("hide");
+    fbapp.style.classList.add("display");
+  }
+
+// function makeGeneric(e) {
+//   e.preventDefault();
+//   docDefinition.content = { text: '', fontSize: 10 };
+//   pdfMake.createPdf(docDefinition).open();
+// }
+
+// document.getElementById('genero').addEventListener( 'click', makeGeneric, false );
